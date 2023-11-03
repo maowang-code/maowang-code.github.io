@@ -2,7 +2,7 @@
 <html lang="en">
 
   <!-- Head -->
-  <head><meta http-equiv="refresh" content="3; url=https://maowang-code.github.io/" />        
+  <head>        
     <!-- Metadata, OpenGraph and Schema.org -->
     
 
@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Mao  Wang | Page not found</title>
+    <title>Mao  Wang | Polymer Fractional Free Volume (FFV) prediction platform is online !</title>
     <meta name="author" content="Mao  Wang" />
-    <meta name="description" content="Looks like there has been a mistake. Nothing exists here." />
+    <meta name="description" content="predict the fractional free volume of polymer based on its structure" />
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website" />
 
 
@@ -31,7 +31,7 @@
     <!-- Styles -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚓</text></svg>">
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://maowang-code.github.io/404.html">
+    <link rel="canonical" href="https://maowang-code.github.io/blog/2022/ffvpredictionplatform/">
 
     <!-- Dark Mode -->
     <script src="/assets/js/theme.js"></script>
@@ -65,7 +65,7 @@
               </li>
               
               <!-- Blog -->
-              <li class="nav-item ">
+              <li class="nav-item active">
                 <a class="nav-link" href="/blog/">blog</a>
               </li>
 
@@ -89,20 +89,134 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <!-- page.html -->
-        <div class="post">
+      <!-- _layouts/post.html -->
 
-          <header class="post-header">
-            <h1 class="post-title">Page not found</h1>
-            <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
-          </header>
+<div class="post">
 
-          <article>
-            <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="https://maowang-code.github.io/">here</a>.</p>
+  <header class="post-header">
+    <h1 class="post-title">Polymer Fractional Free Volume (FFV) prediction platform is online !</h1>
+    <p class="post-meta">February 24, 2022</p>
+    <p class="post-tags">
+      <a href="/blog/2022"> <i class="fas fa-calendar fa-sm"></i> 2022 </a>
 
-          </article>
+    </p>
+  </header>
 
-        </div>
+  <article class="post-content">
+    <h2 id="a-brief-introduction-of-ffv-of-polymers">A brief introduction of FFV of polymers</h2>
+<p>In polymeric materials, free volume refers to the empty space existing among polymer chains (Figure below).</p>
+
+<center>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <source media="(max-width: 480px)" srcset="/assets/img/blog_img/ffv_prediction/fv-480.webp"></source>
+    <source media="(max-width: 800px)" srcset="/assets/img/blog_img/ffv_prediction/fv-800.webp"></source>
+    <source media="(max-width: 1400px)" srcset="/assets/img/blog_img/ffv_prediction/fv-1400.webp"></source>
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/blog_img/ffv_prediction/fv.png" data-zoomable="">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+</center>
+
+<center>Graphical representation of free volume in polymers. Holes are evidenced by the red dash. [Source:http://eprints-phd.biblio.unitn.it/2733/1/David_Roilo_Thesis.pdf]
+</center>
+
+<p><br></p>
+
+<p>To quantitatively measure the free volume, fractional free volume (FFV) (<em>i.e.</em>, the percentage of free volume to the whole polymer) is widely used. FFV is regarded as an intrinsic property of polymer materials.</p>
+
+<p>polymers with high FFV are desired for separation applications. The PIM (polymers of intrinsic microporosity) polymers are one of the most popular high-FFV polymers. The interconnect pores inside PIMs enable PIMs to have extremely high gas permeability which is several orders higher than the traditional gas separation polymers.</p>
+
+<p>Fast prediction of FFV of polymers on its structure will greatly accelerate the discovery of high FFV polymers. This is what our FFV prediction platform is made for.</p>
+
+<p>Below, I will introduce the interface of the platform.<br>
+<br></p>
+
+<h2 id="interface">Interface</h2>
+
+<p><strong>To use the platform, first, visit the website</strong> <a href="https://ffv-prediction.herokuapp.com" target="_blank" rel="noopener noreferrer">https://ffv-prediction.herokuapp.com</a></p>
+
+<center>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <source media="(max-width: 480px)" srcset="/assets/img/blog_img/ffv_prediction/ffv1-480.webp"></source>
+    <source media="(max-width: 800px)" srcset="/assets/img/blog_img/ffv_prediction/ffv1-800.webp"></source>
+    <source media="(max-width: 1400px)" srcset="/assets/img/blog_img/ffv_prediction/ffv1-1400.webp"></source>
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/blog_img/ffv_prediction/ffv1.png" data-zoomable="">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+</center>
+
+<center>Platform interface</center>
+
+<h3 id="1-visualization">1. visualization</h3>
+<p>There are 4 columns on the page and the left 3 columns are used for visualization of the 29,482 screened polymers with predicted FFV &gt; 0.2 in our recent work.</p>
+<ul>
+  <li>You can use the dropdown bar to select the density, van der Waals volume, FFV, SCScore of the polymers. The relationship between those parameters are:<br>
+FFV = 1 - 1.3 density * Vvdw</li>
+  <li>As for SCScore, it is used to evaluate the synthesizability of a molecule (the lower, the easier to synthesize).</li>
+  <li>By clicking a data point in the plot (2nd column), its corresponding polymer structure and selected values will appear in the 3rd column.</li>
+  <li>You can also download the whole Excel files of the 29,482 screened polymers by clicking the Download bottom.</li>
+</ul>
+
+<h3 id="2-ffv-prediction">2. FFV prediction</h3>
+<p>One main purpose of the platform is to enable everyone to perform fast FFV prediction on polymer structures.<br>
+in the 4th column, after inputting the SMILES strings of the polymer, its prediction will show up below.<br>
+There are some requirements for the input polymer SMILES strings.</p>
+<ul>
+  <li>It should have two connecting points</li>
+  <li>The connecting points are represented by *</li>
+</ul>
+
+<p>If you are not familiar with the SMILES representation of polymers, you can use the link provided to draw your polymer structures online to generate the SMILES strings.</p>
+
+<center>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <source media="(max-width: 480px)" srcset="/assets/img/blog_img/ffv_prediction/draw4-480.webp"></source>
+    <source media="(max-width: 800px)" srcset="/assets/img/blog_img/ffv_prediction/draw4-800.webp"></source>
+    <source media="(max-width: 1400px)" srcset="/assets/img/blog_img/ffv_prediction/draw4-1400.webp"></source>
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/blog_img/ffv_prediction/draw4.png" data-zoomable="">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+</center>
+
+<center>A Method to generate polymer SMILES </center>
+<p>(In step 4, you should replace [K] with [*])</p>
+
+<p>Now, you can predict the density, van der Waals volume, FFV of polymer of your interests.
+<strong>Please enjoy!</strong> <img class="emoji" title=":fire:" alt=":fire:" src="https://github.githubassets.com/images/icons/emoji/unicode/1f525.png" height="20" width="20"></p>
+
+
+  </article>
+
+</div>
 
     </div>
 
